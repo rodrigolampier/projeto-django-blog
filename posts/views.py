@@ -17,6 +17,7 @@ class PostIndex(ListView):
     # Ordena os post em ordem decrescente pelo campo ID
     def get_queryset(self):
         qs = super().get_queryset()
+        qs = qs.select_related('categoria_post')  # Permite buscar as categorias dos posts com apenas um única consulta
         qs = qs.order_by('-id').filter(publicado_post=True)
         # Só conta os comentário com True em publicar
         # numero_comentarios é um atributo novo que vai pro html
