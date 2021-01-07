@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3u&4*d11+ij=97ftl@ui!8d=1m@8_km)jdnxzp38gzd-!$3#_5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['blog.rodrigolampier.com']
 
