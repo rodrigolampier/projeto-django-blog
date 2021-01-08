@@ -11,7 +11,7 @@ class Comentario(models.Model):
     # Se deletar um post, todos os comentários do post serão deletados
     post_comentario = models.ForeignKey(Post, on_delete=models.CASCADE)
     # Se deletar um usuario, os comentarios serão mantidos
-    usuario_comentario = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=None)
+    usuario_comentario = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
     data_comentario = models.DateTimeField(default=timezone.now)
     publicado_comentario = models.BooleanField(default=False)
 
